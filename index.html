@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -15,26 +21,34 @@
         <div class="display2">5</div>
       </div>
 
-      <button class="two-buttons">CLEAR</button>
-      <button>DEL</button>
+      <button
+        class="two-buttons"
+        id="clear-all"
+        style="background-color: #f1485b"
+      >
+        CLEAR
+      </button>
+      <button id="deleteLastInput">DEL</button>
 
       <button class="operators">÷</button>
-      <button class="operators">7</button>
-      <button class="operators">8</button>
+      <button class="operands">7</button>
+      <button class="operands">8</button>
       <button class="operands">9</button>
       <button class="operators">x</button>
-      <button class="operators">4</button>
-      <button class="operators">5</button>
+      <button class="operands">4</button>
+      <button class="operands">5</button>
       <button class="operands">6</button>
       <button class="operators">+</button>
-      <button class="operators">1</button>
-      <button class="operators">2</button>
+      <button class="operands">1</button>
+      <button class="operands">2</button>
       <button class="operands">3</button>
       <button class="operators">-</button>
-      <button class="operands">.</button>
-      <button class="operators">0</button>
-      <button class="two-buttons">=</button>
+      <button class="operands" id="dot">.</button>
+      <button class="operands">0</button>
+      <button class="two-buttons" id="equals" style="background-color: #f1485b">
+        =
+      </button>
     </div>
-    <!-- <footer><p>Copyright © 2023 ngf11</p></footer> -->
+    <footer><p>Copyright © 2023 ngf11</p></footer>
   </body>
 </html>
