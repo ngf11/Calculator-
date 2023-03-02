@@ -1,3 +1,5 @@
+function populateDisplay() {}
+
 function operate(operator, a, b) {
   if (operator === "+") {
     return add(a, b);
@@ -24,3 +26,8 @@ function multiply(a, b) {
 function divide(a, b) {
   return a / b;
 }
+
+const displayPrevious = document.querySelector(".display1");
+const displayCurrent = document.querySelector(".display2");
+const operators = document.querySelectorAll(".operators");
+const operand = document.querySelectorAll(".operands");
