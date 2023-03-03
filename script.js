@@ -1,5 +1,3 @@
-function populateDisplay() {}
-
 function operate(operator, a, b) {
   if (operator === "+") {
     return add(a, b);
@@ -30,4 +28,13 @@ function divide(a, b) {
 const displayPrevious = document.querySelector(".display1");
 const displayCurrent = document.querySelector(".display2");
 const operators = document.querySelectorAll(".operators");
-const operand = document.querySelectorAll(".operands");
+const operands = document.querySelectorAll(".operands");
+const equals = document.getElementById("equals");
+const clearButton = document.getElementById("clear-all");
+const deleteButton = document.getElementById("deleteLastInput");
+
+for (let i = 0; i < operands.length; i++) {
+  operands[i].addEventListener("click", function () {
+    displayCurrent.innerHTML += this.innerHTML;
+  });
+}
