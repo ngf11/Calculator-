@@ -32,9 +32,21 @@ const operands = document.querySelectorAll(".operands");
 const equals = document.getElementById("equals");
 const clearButton = document.getElementById("clear-all");
 const deleteButton = document.getElementById("deleteLastInput");
+let value;
 
+// everything bellow needs testing
 for (let i = 0; i < operands.length; i++) {
-  operands[i].addEventListener("click", function () {
+  operands[i].addEventListener("click", function (event) {
     displayCurrent.innerHTML += this.innerHTML;
   });
 }
+
+for (let i = 0; i < operators.length; i++) {
+  operators[i].addEventListener("click", function () {
+    displayCurrent.innerHTML += this.innerHTML;
+  });
+}
+clearButton.addEventListener("click", (event) => {
+  displayCurrent.innerHTML = "";
+  displayPrevious.innerHTML = "";
+});
