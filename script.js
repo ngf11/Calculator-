@@ -1,6 +1,6 @@
 function operate(operator, a, b) {
   if (operator === "+") {
-    return add(a, b);
+    return sum(a, b);
   } else if (operator === "-") {
     return subtract(a, b);
   } else if (operator === "*") {
@@ -11,6 +11,7 @@ function operate(operator, a, b) {
     return "Error";
   }
 }
+
 function sum(a, b) {
   return a + b;
 }
@@ -32,21 +33,33 @@ const operands = document.querySelectorAll(".operands");
 const equals = document.getElementById("equals");
 const clearButton = document.getElementById("clear-all");
 const deleteButton = document.getElementById("deleteLastInput");
-let value;
+let firstValue;
+let secondValue;
 
 // everything bellow needs testing
+
 for (let i = 0; i < operands.length; i++) {
-  operands[i].addEventListener("click", function (event) {
-    displayCurrent.innerHTML += this.innerHTML;
+  operands[i].addEventListener("click", function (e) {
+    displayCurrent.innerText += this.innerText;
+    e.target.innerText;
   });
 }
 
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener("click", function () {
-    displayCurrent.innerHTML += this.innerHTML;
+    displayCurrent.innerText += this.innerText;
   });
 }
-clearButton.addEventListener("click", (event) => {
-  displayCurrent.innerHTML = "";
-  displayPrevious.innerHTML = "";
+clearButton.addEventListener("click", (e) => {
+  displayCurrent.innerText = "";
+  displayPrevious.innerText = "";
+});
+
+deleteButton.addEventListener("click", (e) => {
+  displayCurrent.innerText = displayCurrent.innerText.slice(0, -1);
+});
+
+equals.addEventListener("click", (e) => {
+  displayPrevious.innerText = displayCurrent.innerText;
+  displayCurrent.innerText = operate();
 });
