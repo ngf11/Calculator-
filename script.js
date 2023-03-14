@@ -58,10 +58,8 @@ for (let i = 0; i < operands.length; i++) {
 
     if (!operator) {
       firstValue = parseFloat(displayCurrent.innerText);
-      console.log("firstValue:", firstValue);
     } else {
       secondValue = parseFloat(displayCurrent.innerText);
-      console.log("secondValue:", secondValue);
     }
   });
 }
@@ -96,4 +94,3 @@ equals.addEventListener("click", (e) => {
   secondValue = null;
   operator = null;
 });
-// firstValue == 0 && operator == "÷" && secondValue == 0
